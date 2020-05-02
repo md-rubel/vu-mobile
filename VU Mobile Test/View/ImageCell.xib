@@ -10,25 +10,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ImageCell" reuseIdentifier="ImageCell" id="gTV-IL-0wX" customClass="ImageCell" customModule="VU_Mobile_Test" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="gTV-IL-0wX" customClass="ImageCell" customModule="VU_Mobile_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gby-Lt-EhD" customClass="CardView" customModule="VU_Mobile_Test" customModuleProvider="target">
-                        <rect key="frame" x="6" y="6" width="128" height="128"/>
+                        <rect key="frame" x="20" y="20" width="110" height="110"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HfG-R8-aHU" customClass="LazyImageView" customModule="LazyImage">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="128" id="1vp-wf-A3t"/>
+                            <constraint firstAttribute="width" constant="110" id="1vp-wf-A3t"/>
                             <constraint firstAttribute="trailing" secondItem="HfG-R8-aHU" secondAttribute="trailing" id="IGh-nI-EdP"/>
-                            <constraint firstAttribute="height" constant="128" id="T74-aV-2lr"/>
+                            <constraint firstAttribute="height" constant="110" id="T74-aV-2lr"/>
                             <constraint firstItem="HfG-R8-aHU" firstAttribute="leading" secondItem="gby-Lt-EhD" secondAttribute="leading" id="doR-g4-NuF"/>
                             <constraint firstItem="HfG-R8-aHU" firstAttribute="top" secondItem="gby-Lt-EhD" secondAttribute="top" id="hdE-An-Xqe"/>
                             <constraint firstAttribute="bottom" secondItem="HfG-R8-aHU" secondAttribute="bottom" id="zTg-bX-3pv"/>

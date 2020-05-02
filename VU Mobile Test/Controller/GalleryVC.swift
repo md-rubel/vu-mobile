@@ -16,6 +16,9 @@ class GalleryVC: UIViewController {
     private let api = FetchAPI()
     private var avatars: [String] = []
     
+    private var estimateWidth: CGFloat = 125.0
+    private var cellMarginSize: CGFloat = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,8 +51,8 @@ class GalleryVC: UIViewController {
         
         // Grid Layout Setup
         let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        flow.minimumInteritemSpacing = 0
-        flow.minimumLineSpacing = 0
+        flow.minimumInteritemSpacing = cellMarginSize
+        flow.minimumLineSpacing = cellMarginSize
         
         // Loading Spinner Setup
         spinner.style = .whiteLarge
@@ -77,6 +80,21 @@ extension GalleryVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         return cell
     }
+}
+
+extension GalleryVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = calculateWidth()
+        return CGSize(width: width, height: width)
+    }
     
-    
+    func calculateWidth() -> CGFloat {
+        let estimatedWidth = estimateWidth
+        let cellCount = floor(self.view.frame.size.width / estimatedWidth)
+        
+        let margin = cellMarginSize * 2
+        let width = (self.view.frame.size.width - cellMarginSize * (cellCount - 1) - margin) / cellCount
+        
+        return width
+    }
 }
