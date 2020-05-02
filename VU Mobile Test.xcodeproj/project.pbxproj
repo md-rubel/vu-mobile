@@ -17,6 +17,7 @@
 		25317279245D7EF00026A2CD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25317278245D7EF00026A2CD /* CardView.swift */; };
 		2531727B245D81440026A2CD /* FetchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2531727A245D81440026A2CD /* FetchAPI.swift */; };
 		2531727C245DAAB50026A2CD /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25317274245D7E050026A2CD /* ImageCell.swift */; };
+		25D63ABD245DE3ED00B8AC18 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D63ABC245DE3ED00B8AC18 /* WebKit.framework */; };
 		487A6FBEB7A0747F77EAEA1A /* Pods_VU_Mobile_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F70FB7BE0D0CF1CE05439C /* Pods_VU_Mobile_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		25317278245D7EF00026A2CD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2531727A245D81440026A2CD /* FetchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAPI.swift; sourceTree = "<group>"; };
 		2538C2DB3C3FD1C43BB65016 /* Pods-VU Mobile Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VU Mobile Test.release.xcconfig"; path = "Target Support Files/Pods-VU Mobile Test/Pods-VU Mobile Test.release.xcconfig"; sourceTree = "<group>"; };
+		25D63ABC245DE3ED00B8AC18 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9305258BFA806D1BF1FD37C4 /* Pods-VU Mobile Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VU Mobile Test.debug.xcconfig"; path = "Target Support Files/Pods-VU Mobile Test/Pods-VU Mobile Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D63ABD245DE3ED00B8AC18 /* WebKit.framework in Frameworks */,
 				487A6FBEB7A0747F77EAEA1A /* Pods_VU_Mobile_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +116,7 @@
 		2FDA779052A0C7482C368313 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25D63ABC245DE3ED00B8AC18 /* WebKit.framework */,
 				15F70FB7BE0D0CF1CE05439C /* Pods_VU_Mobile_Test.framework */,
 			);
 			name = Frameworks;

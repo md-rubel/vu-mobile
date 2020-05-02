@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GalleryVC-->
+        <!--Gallery-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GalleryVC" customModule="VU_Mobile_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="GalleryVC" customModule="VU_Mobile_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,19 +47,55 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sq8-Gp-Z1a"/>
+                    <navigationItem key="navigationItem" title="Gallery" id="sq8-Gp-Z1a"/>
                     <connections>
                         <outlet property="collectionView" destination="gwL-Fu-bYV" id="N3Y-q4-cTV"/>
+                        <segue destination="Tto-JB-us9" kind="show" identifier="openWebView" id="MvK-cd-Hve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="980" y="138"/>
+        </scene>
+        <!--Web View-->
+        <scene sceneID="Imf-Mp-T09">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Tto-JB-us9" customClass="ResultVC" customModule="VU_Mobile_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5R-Sd-ORx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-KW-JLs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FLm-Li-hGk" firstAttribute="bottom" secondItem="gXk-KW-JLs" secondAttribute="bottom" id="4zz-Q4-aVT"/>
+                            <constraint firstItem="FLm-Li-hGk" firstAttribute="trailing" secondItem="gXk-KW-JLs" secondAttribute="trailing" id="GKL-wy-JLm"/>
+                            <constraint firstItem="gXk-KW-JLs" firstAttribute="top" secondItem="FLm-Li-hGk" secondAttribute="top" id="Q1a-zp-ac7"/>
+                            <constraint firstItem="gXk-KW-JLs" firstAttribute="leading" secondItem="FLm-Li-hGk" secondAttribute="leading" id="yuB-oX-Euu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FLm-Li-hGk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Web View" id="NqY-UQ-cFc"/>
+                    <connections>
+                        <outlet property="webView" destination="gXk-KW-JLs" id="IVN-ap-K4J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fP-MC-Juf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PKf-8E-isg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RKs-a8-V74" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="RKs-a8-V74" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jp9-cy-Z9D">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

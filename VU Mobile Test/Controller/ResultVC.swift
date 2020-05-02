@@ -7,24 +7,23 @@
 //
 
 import UIKit
+import WebKit
 
-class ResultVC: UIViewController {
+class ResultVC: UIViewController, WKNavigationDelegate {
+    
+    @IBOutlet weak var webView: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        webView.backgroundColor = .white
+        webView.navigationDelegate = self
+        
+        let url = URL(string: "https://google.com")!
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
