@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-VU Mobile Test/Pods-VU Mobile Test-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/LazyImage/LazyImage.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
